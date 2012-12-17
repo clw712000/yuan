@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  
+  <filter>
+  	<filter-name>gbk</filter-name>
+  	<filter-class>com.nianyuan.blogs.VO.TeFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>usercheck</filter-name>
+    <filter-class>com.nianyuan.blogs.VO.LogFilter</filter-class>
+  </filter>
+  <filter-mapping>
+   	<filter-name>gbk</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>usercheck</filter-name>
+    <url-pattern>/index/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Logon</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.Logon</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListTalk</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.servlet.ListTalk</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddTalk</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.servlet.AddTalk</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EditTalk</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.servlet.EditTalk</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Updata</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.servlet.Updata</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteTalk</servlet-name>
+    <servlet-class>com.nianyuan.blogs.web.servlet.DeleteTalk</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/servlet/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Logon</servlet-name>
+    <url-pattern>/servlet/Logon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListTalk</servlet-name>
+    <url-pattern>/servlet/ListTalk</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddTalk</servlet-name>
+    <url-pattern>/servlet/AddTalk</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditTalk</servlet-name>
+    <url-pattern>/servlet/EditTalk</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Updata</servlet-name>
+    <url-pattern>/servlet/Updata</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteTalk</servlet-name>
+    <url-pattern>/servlet/DeleteTalk</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
