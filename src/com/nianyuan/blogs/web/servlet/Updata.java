@@ -56,24 +56,22 @@ public class Updata extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// 得到内容
 		int id = Integer.parseInt(request.getParameter("id"));
 		String name = request.getParameter("name");
 		String email= request.getParameter("email");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		// 设置内容
+
 		Bogo p = new Bogo();
 		p.setLid(id);
 		p.setLname(name);
 		p.setLtitle(title);
 		p.setLcontent(content);
 		p.setLemail(email);
-		// 获取id
+		
 		BogoPAO b = new BogoPAO();
 		b.updateById(p);
 		
-		// 装发
 		response.sendRedirect("/nianyuan/servlet/ListTalk");
 
 	}
